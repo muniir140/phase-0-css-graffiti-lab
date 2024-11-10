@@ -1,1 +1,85 @@
 /* write your override styles here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles for all .tag elements */
+.tag {
+  background-color: #f0f0f0; /* Light grey background */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Specific styles for each tag */
+.tag-1 {
+  background-color: #ff6666; /* Red */
+}
+
+.tag-2 {
+  background-color: #66ff66; /* Green */
+}
+
+.tag-3 {
+  background-color: #6666ff; /* Blue */
+}
+
+.slick {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.wicked {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  color: #ff00ff; /* Magenta */
+}
+
+/* Parent containers styling */
+.parent {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Override for tag inside the parent containers */
+.parent .tag {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Style for tag-6 and tag-7 to add extra flair */
+#tag-6, #tag-7 {
+  border: 2px solid #333;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific override for nested tags inside parent */
+.parent > .tag > .tag {
+  padding: 10px;
+  background-color: #e0e0e0; /* Slightly darker background */
+}
+
+/* Wall container for better presentation */
+#wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Add a little hover effect for interaction */
+.tag:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Focus on accessibility for hover */
+.tag:focus {
+  outline: 2px solid #ff00ff; /* Magenta outline */
+  outline-offset: 4px;
+}
